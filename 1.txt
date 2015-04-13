@@ -1,0 +1,4 @@
+1.准备租阿里云服务器。
+2.
+继续参照以下网址学习struct2
+http://wenku.baidu.com/link?url=zlKgXTfR-tFXsPxblAM9oj1bD3GfYZNqSB2AzVKIOlws_5AzzICDve9gtMaRlYxsKjNUlCFkC7V9XdkO5YZwi2lCVsBRdyUwRDforTmKJmi
