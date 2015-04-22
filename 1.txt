@@ -2,3 +2,8 @@
 2.
 继续参照以下网址学习struct2
 http://wenku.baidu.com/link?url=zlKgXTfR-tFXsPxblAM9oj1bD3GfYZNqSB2AzVKIOlws_5AzzICDve9gtMaRlYxsKjNUlCFkC7V9XdkO5YZwi2lCVsBRdyUwRDforTmKJmi
+26页。
+主要学习ognl
+
+SSH框架搭建
+http://blog.csdn.net/yeohcooller/article/details/9316923
