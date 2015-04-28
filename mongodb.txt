@@ -1,0 +1,50 @@
+1.mongodb安装
+http://www.w3cschool.cc/mongodb/mongodb-linux-install.html
+
+
+2.启动命令介绍
+http://blog.csdn.net/ligaofeng/article/details/44416765
+
+启动命令：
+# numactl --interleave=all /home/local/mongodb/bin/mongod --config /home/local/mongodb/bin/mongodb.conf
+或
+# numactl --interleave=all /home/local/mongodb/bin/mongod -f /home/local/mongodb/bin/mongodb.conf
+
+3.
+numactl命令介绍
+http://www.dedecms.com/knowledge/data-base/nosql/2012/0820/8684.html
+
+4.
+mongodb后台启动
+http://chenzhou123520.iteye.com/blog/1634676
+
+cd /root/mongodb/mongodb-linux-x86_64-3.0.2/bin
+
+numactl --interleave=all /root/mongodb/mongodb-linux-x86_64-3.0.2/bin/mongod --fork --logpath=/root/mongodb/mongodb.log
+
+5.如何进入mongodb
+http://chenzhou123520.iteye.com/blog/1582179
+
+6.修改环境变量，使用的是第二种方法修改/etc/profile文件
+http://lxsym.blog.51cto.com/1364623/741902/
+
+7.设置开机自动启动，使用的是修改/etc/rc.locol文件
+http://www.cnblogs.com/gzggyy/archive/2012/08/07/2626574.html
+注意：命令地址等都必须是全路径，例如mongod命令即使修改了环境变量还是需要写出全路径。可能是自动启动的时候环境变量还没加载？
+
+mongovue无限试用办法
+http://blog.csdn.net/hengyunabc/article/details/7276376
+
+8.mongodb w3cschool笔记
+
+MongoDB数据更新可以使用update()函数。
+
+db.collection.update( criteria, objNew, upsert, multi )
+update()函数接受以下四个参数：
+
+criteria : update的查询条件，类似sql update查询内where后面的。
+objNew : update的对象和一些更新的操作符（如$,$inc...）等，也可以理解为sql update查询内set后面的
+upsert : 这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。
+multi : mongodb默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。
+
+注：默认竟然是只更新找到的第一条记录。和sql的使用方式很不同。

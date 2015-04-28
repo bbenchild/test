@@ -1,0 +1,72 @@
+java1.6
+
+搜索linux java1.6 64位。
+下载后，参照以下网站安装。
+http://www.cnd8.com/downinfo/3082.html
+第一：用linux 的命令运行它：  sh jdk-6u2-linux-i586-rpm.bin
+
+第二：按多次回车后出现
+
+　　    Do you agree to the above license terms? [yes or no]
+
+　　    输入yes
+并没有出现第二步。
+
+第三：编辑环境变量
+在/etc/profile下增加
+
+# set Java environment
+JAVA_HOME=/usr/share/jdk1.6.0_43
+PATH=$JAVA_HOME/bin:$PATH
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JAVA_HOME
+export PATH
+export CLASSPATH
+
+JAVA_HOME=/usr/share/jdk1.6.0_43 根据自己情况调整。
+
+第四 测试 需要重启
+
+[root@localhost ~]# echo $JAVA_HOME
+/usr/share/jdk1.6.0_43
+[root@localhost ~]# echo $PATH
+/usr/share/jdk1.6.0_43/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+[root@localhost ~]# echo $CLASSPATH
+.:/usr/share/jdk1.6.0_43/lib/dt.jar:/usr/share/jdk1.6.0_43/lib/tools.jar
+
+[root@localhost ~]# java -version
+java version "1.6.0_43"
+Java(TM) SE Runtime Environment (build 1.6.0_43-b01)
+Java HotSpot(TM) 64-Bit Server VM (build 20.14-b01, mixed mode)
+
+
+
+glassfish3.1.2.2
+
+在http://dlc-cdn.sun.com/glassfish/3.1.2.2/release/
+下载glassfish-3.1.2.2.zip     
+
+解压unzip glassfish-4.0.zip
+注意:这个命令会解压zip并且配置一个Domain1默认域
+
+在glassfish3/bin路径，"./asadmin"进入asadmin模式
+start-domain domain1
+启动domain1
+如果需要远程登录需要先设置管理员账号的密码。
+ change-admin-password
+然后通过enable-secure-admin 就可以启动远程登录了。
+
+
+
+
+mysql5.6安装
+
+安装方式采用rpm的方式。安装包直接用了之前项目的
+MySQL-client-5.6.16-1.rhel5.x86_64.rpm
+MySQL-server-5.6.16-1.rhel5.x86_64.rpm
+
+安装过程基本参照：
+http://blog.sina.com.cn/s/blog_413f41c20101k4hm.html
+
+安装完成后mysql 会为root用户随机生成一个密码，因此第一次登录的时候密码不是空的。
+随机密码在安装server端的时候有告知。
