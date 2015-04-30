@@ -48,3 +48,8 @@ upsert : 这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默
 multi : mongodb默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。
 
 注：默认竟然是只更新找到的第一条记录。和sql的使用方式很不同。
+
+
+
+MongoDB整合Spring
+http://limingnihao.iteye.com/blog/1940446
