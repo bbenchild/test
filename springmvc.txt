@@ -1,0 +1,14 @@
+Springmvc与spring的契合度相当高。
+修改内容：
+web.xml
+prom.xml
+
+
+实践主要参考：
+http://yuanmomo.net/archives/449
+
+概念参考：
+http://jinnianshilongnian.iteye.com/blog/1594806
+
+参考：
+http://www.cnblogs.com/leiOOlei/archive/2013/11/12/3414612.html
