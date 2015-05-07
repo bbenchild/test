@@ -1,0 +1,5 @@
+安装maven
+http://blog.csdn.net/chenxuejiakaren/article/details/7938524
+
+在eclipse中设置maven
+为了使得Eclipse中安装的Maven插件，同windows中安装的那个相同，需要让eclipse中的maven重新定位一下，点击Window -> Preference -> Maven -> Installation -> Add进行设置
