@@ -56,3 +56,31 @@ multi : mongodb默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件
 
 MongoDB整合Spring
 http://limingnihao.iteye.com/blog/1940446
+
+
+
+9.用户设置。
+mongodb3 已经废弃了addUser方法。需要使用createUser方法。
+详情参看mongodb文档：http://docs.mongodb.org/manual/reference/method/js-user-management/
+
+use products
+db.createUser(
+   {
+     user: "accountUser",
+     pwd: "password",
+     roles: [ "readWrite", "dbAdmin" ]
+   }
+)
+
+
+> use admin
+switched to db admin
+> db.createUser(
+   {
+     user: "siteUserAdmin",
+     pwd: "password",
+     roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+   }
+ )
+ 
+ 
